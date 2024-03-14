@@ -38,6 +38,9 @@ export const WeatherProvider: FC<IWeatherProvider> = ({ children }) => {
       console.log("Location denied or the browser doesn't support location");
       fetchData();
     }
+    if (!weatherData) {
+      fetchData();
+    }
   }, []);
 
   return (

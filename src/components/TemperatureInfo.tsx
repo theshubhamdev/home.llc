@@ -63,7 +63,7 @@ const TemperatureInfo = () => {
   };
   return (
     <div>
-      <div className="flex flex-row  justify-between px-20">
+      <div className="flex flex-row  justify-between px-5">
         <BaseText>Temperature</BaseText>
         <select
           name="timeline"

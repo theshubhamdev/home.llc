@@ -20,12 +20,12 @@ const TimeWeatherItem: FC<TimeWeatherItemProps> = ({
   return (
     <div
       style={{ backgroundColor: active ? "#0a3940" : "#003339" }}
-      className="flex flex-col items-center space-x-1  rounded-3xl p-5"
+      className="flex flex-col items-center space-x-1  rounded-3xl p-2"
       onClick={onPress}
     >
-      <BaseText className="text-sm text-white">
+      <BaseText className="text-xs text-white">
         {/* Code to format in the format Today, 7:30PM */}
-        {dayjs(data.dt_txt).isToday() ? "Today, " : "Tomorrow, "}
+        {/* {dayjs(data.dt_txt).isToday() ? "Today, " : "Tomorrow, "} */}
         {dayjs(data.dt_txt).format("h A")}
       </BaseText>
       <BsClouds className="text-white" />
@@ -44,7 +44,7 @@ const WeatherData = () => {
   return (
     <div
       style={{ backgroundColor: "#003339" }}
-      className="flex flex-row flex-wrap items-center justify-between rounded-xl px-2 py-1 shadow-md bg-blue-600"
+      className="flex mx-5 flex-row flex-wrap items-center justify-around rounded-xl px-2 py-1 shadow-md bg-blue-600"
     >
       {data?.map((item, index) => (
         <TimeWeatherItem

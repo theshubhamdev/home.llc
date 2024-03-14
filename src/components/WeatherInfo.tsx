@@ -18,8 +18,8 @@ const WeatherInfoItem: FC<WeatherInfoItemProps> = ({ title, value }) => {
 const WeatherInfo = () => {
   const { weatherData } = useContext(WeatherContext);
   return (
-    <div>
-      <BaseText>Additional Info</BaseText>
+    <div className="px-5">
+      <BaseText className="">Additional Info</BaseText>
       <div className="flex flex-row justify-between mt-5">
         <WeatherInfoItem
           title="Precipitation"

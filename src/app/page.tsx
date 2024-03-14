@@ -15,10 +15,10 @@ export default function Home() {
 
   return (
     <main>
-      <div className="min-h-screen p-24 items-center justify-between">
-        <div className="flex flex-row items-center justify-between">
-          <div className="space-y-2">
-            <BaseText>{weatherData?.city?.name || ""}</BaseText>
+      <div className="min-h-screen py-24 items-center justify-around">
+        <div className="flex flex-row items-center justify-around">
+          <div className="space-y-3">
+            <BaseText>{weatherData?.city?.name || ""},</BaseText>
             <BaseText>{weatherData?.city?.country || ""}</BaseText>
             <BaseText className="text-sm text-gray-500">
               {dayjs(weatherData?.list[0].dt_txt).format("dddd, MMMM D")}
